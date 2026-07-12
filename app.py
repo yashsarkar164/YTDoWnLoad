@@ -164,6 +164,9 @@ def download():
 
 
 if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 5000))
+
     print("Starting YT Downloader UI - Web Edition")
     print(f"ffmpeg found: {ffmpeg_available()}")
-    app.run(host="127.0.0.1", port=5000, debug=False)
+
+    app.run(host="0.0.0.0", port=port, debug=False)
