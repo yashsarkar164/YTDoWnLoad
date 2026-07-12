@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>YT Downloader UI - Web Edition</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>🎬 YT Downloader <span>Web Edition</span></h1>
+      <p class="tagline">A browser front end for yt-dlp + ffmpeg</p>
+    </header>
+
+    <main class="card">
+      <label for="url">Video URL</label>
+      <div class="row">
+        <input id="url" type="text" placeholder="https://www.youtube.com/watch?v=..." autocomplete="off">
+        <button id="fetchBtn">Fetch Info</button>
+      </div>
+      <p id="errorMsg" class="error hidden"></p>
+
+      <section id="result" class="result hidden">
+        <div class="video-info">
+          <img id="thumb" alt="thumbnail">
+          <div class="meta">
+            <h2 id="title"></h2>
+            <p id="uploader"></p>
+            <p id="duration"></p>
+          </div>
+        </div>
+
+        <div class="row quality-row">
+          <label for="quality">Quality</label>
+          <select id="quality">
+            <option value="best">Best available (video+audio)</option>
+            <option value="1080p">1080p</option>
+            <option value="720p">720p</option>
+            <option value="480p">480p</option>
+            <option value="audio_mp3">Audio only (MP3)</option>
+          </select>
+          <button id="downloadBtn">Download</button>
+        </div>
+        <p id="downloadStatus" class="status hidden"></p>
+      </section>
+    </main>
+
+    <footer>
+      <p>⚠️ Educational tool. Only download media you own, that's in the public domain,
+      Creative Commons licensed, or that you have explicit permission to save.
+      Respect YouTube's Terms of Service and applicable copyright law.</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
