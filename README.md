@@ -41,6 +41,7 @@ python3 -m venv venv
 source venv/bin/activate        # Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
+Install ffmpeg (and Node.js, if you hit JS-challenge errors like the original setup script warned about)
 
 ## Run
 ```bash
