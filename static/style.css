@@ -153,6 +153,49 @@ button:disabled { opacity: 0.6; cursor: not-allowed; }
   color: var(--muted);
 }
 
+.status.error-text {
+  color: #ff8080;
+}
+
+.progress-block {
+  margin-top: 16px;
+}
+
+.progress-track {
+  width: 100%;
+  height: 10px;
+  background: #0f1115;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--accent), var(--accent-hover));
+  border-radius: 999px;
+  transition: width 0.3s ease;
+}
+
+.progress-fill.postprocessing {
+  background: linear-gradient(90deg, #4d90ff, #6ba6ff);
+}
+
+.progress-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 8px;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.progress-details span:first-child {
+  color: var(--text);
+  font-weight: 600;
+}
+
 footer {
   text-align: center;
   margin-top: 24px;
